@@ -3,6 +3,8 @@ require('dotenv').config();
 const express = require('express');
 const cors = require('cors');
 
+const unitDonorRoutes = require('./routes/unitDonorRoutes');
+const pendonorRoutes = require('./routes/pendonorRoutes');
 const { notFoundHandler, errorHandler } = require('./middlewares/errorHandler');
 
 const app = express();
@@ -18,7 +20,8 @@ app.use(
 // Parser body JSON. Body rusak ditangani errorHandler.
 app.use(express.json());
 
-// Route akan didaftarkan pada Bagian C.
+app.use('/unit-donor', unitDonorRoutes);
+app.use('/pendonor', pendonorRoutes);
 
 // Middleware paling akhir: 404 lalu error handling terpusat.
 app.use(notFoundHandler);
