@@ -1,0 +1,22 @@
+{
+  "name": "uts-paw2-2428240101",
+  "version": "1.0.0",
+  "description": "UTS Pengembangan Aplikasi Web II - REST API Unit Donor Darah",
+  "main": "server.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "start": "node server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "cors": "^2.8.6",
+    "dotenv": "^18.0.10",
+    "express": "^5.3.0",
+    "mongoose": "^9.12.1"
+  }
+}
